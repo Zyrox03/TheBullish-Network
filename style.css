@@ -212,6 +212,7 @@ nav .btn {
 
 .sideNavBar ul a{
     height: 19%;
+    min-height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -220,6 +221,7 @@ nav .btn {
     text-decoration: none;
     color: white;
     border-bottom: 1px solid #307DD7;
+
 
 }
 
@@ -530,6 +532,10 @@ main .LogoSide{
 
 }
 
+.VM{
+    text-align: center;
+}
+
 .Vision_Mission .VM:hover{
     transform: translateY(-10px);
     cursor: pointer;
@@ -644,7 +650,7 @@ main .LogoSide{
 }
 
 .image_topic .img_space {
-    width: 80%;
+    width: 100%;
     height: 30em;
 
 }
@@ -1191,7 +1197,7 @@ footer {
     }
 
     .image_topic {
-        width: 80%;
+        width: 100%;
 
 
     }
@@ -1296,6 +1302,13 @@ footer {
         font-size: 1.2em;
     }
 
+    .Vision_Mission .content{
+        height: 100%;
+        width: 90%;
+    
+    
+    }
+
 
 }
 
@@ -1351,6 +1364,11 @@ footer {
 
     .question h3 {
         font-size: 1.1em;
+
+    }
+
+    .answer p {
+        font-size: 0.8em;
 
     }
 
@@ -1416,6 +1434,19 @@ footer {
       
         
     }
+
+    .VM{
+        text-align: center;
+    }
+
+    .text_topic {
+        width: 100%;
+        margin-bottom: 0em;
+        padding: 0;
+
+
+
+    }
 }
 
 
@@ -1468,6 +1499,10 @@ footer {
 
     .JoinUS{
         height: 60vh;
+    }
+
+    .SideNav{
+        overflow: scroll;
     }
 
 }
