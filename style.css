@@ -16,7 +16,8 @@ body {
 /* nav  */
 
 nav {
-    background-color: #2F2F2F;
+    /* background-color: #2F2F2F; */
+    position: absolute;
     height: 4em;
     padding: 0 1em;
     width: 100%;
@@ -26,7 +27,12 @@ nav {
     position: fixed;
     z-index: 20;
 
+    transition: all 0.25s;
+
 }
+
+.nav-colored { background-color:#2F2F2F; }
+.nav-transparent { background-color:transparent;}
 
 .logo {
     width: 13%;
@@ -269,16 +275,26 @@ main img{
 
 }
 
+main .back_vid{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
 main {
    
-    background-color: #2D2D2D;
+    /* background-color: #2D2D2D; */
 
     background-position: center;
     background-size: cover;
     width: 100%;
     height: 100vh;
     position: relative;
-    top: 4em;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -294,23 +310,27 @@ main {
 
 
 main .textSide {
-    width: 55%;
+    width: 100%;
     height: 100vh;
     display: flex;
-
+background-color: rgba(0, 0, 0,0.6);
+overflow: hidden;
+    position: relative;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-background-color: rgba(0, 0, 0,0.5);
-z-index: 5
+    align-items: center;
+    justify-content: space-around;
+    padding: 7em 0em 2em;
+    text-align: center;
+z-index: 5;
 }
 
 
 main .textSide a{
     text-decoration: none;
+
 }
 
-.LogoSide {
+/* .LogoSide {
     width: 45%;
     height: 100vh;
     z-index: 10;
@@ -320,40 +340,52 @@ main .textSide a{
        align-items: center;
    
 
-}
+} */
 
 
 .Headline,
 .sub_headline,
 .CTA_Btn {
-    width: 90%;
+    width: 100%;
     position: relative;
-    left: 10%;
+    
     
 
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .Headline {
-    font-size: 3em;
+    
     margin-bottom: 1em;
+display: flex;
+flex-direction: column  ;
 
+}
 
+.Headline h2{
+    font-size: 6em;
+    margin-bottom: 0.2em;
 }
 
 .Headline span {
-    color: #307DD7;
+    color: #097cff;
 }
 
-.sub_headline {
+.Headline p{
+    font-size: 2em;
+    width: 80%;
+
+}
+
+/* .sub_headline {
     font-size: 1.5em;
     margin-bottom: 1em;
 
-}
+} */
 
 .CTA_Btn {
     display: flex;
@@ -632,6 +664,7 @@ main .LogoSide{
     display: flex;
     flex-direction: column;
     color: black;
+    padding-top: 2em;
 
 }
 
@@ -697,7 +730,7 @@ padding-top: 2em;
     align-self: center;
 
     font-size: 1.3em;
-
+padding-bottom: 1em;
     text-align: center;
 }
 
@@ -725,7 +758,6 @@ padding-top: 2em;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     font-size: 1.3em;
 }
 
@@ -735,7 +767,7 @@ padding-top: 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 
     list-style: none;
 
@@ -887,6 +919,10 @@ padding-top: 2em;
 
 }
 
+.faq a{
+    color: #307DD7;
+}
+
 .faq .title {
     color: #307DD7;
 
@@ -1018,6 +1054,19 @@ footer {
     }
 
 
+    .Headline h2{
+        font-size: 4em;
+        margin-bottom: 0.2em;
+    }
+    
+  
+    
+    .Headline p{
+        font-size: 1.5em;
+        width: 80%;
+    
+    }
+
 
 }
 
@@ -1076,22 +1125,20 @@ footer {
     }
 
 
-    .Headline,
-    .sub_headline,
-    .CTA_Btn {
-
-        position: relative;
-        left: 0%;
-        padding-left: 1em;
-        margin-bottom: 4em;
-
+    .Headline h2{
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+    
+  
+    
+    .Headline p{
+        font-size: 1.2em;
+        width: 80%;
+    
     }
 
-    .Headline {
-
-        font-size: 2em;
-        margin-top: 2em;
-    }
+    
 
     .CTA_Btn .btn:nth-of-type(2) {
         background-color: gold;
@@ -1321,6 +1368,23 @@ footer {
       
         
     }
+
+
+    .Headline h2{
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+    
+  
+    
+    .Headline p{
+        font-size: 1.1em;
+        width: 80%;
+    
+    }
+
+
+
 }
 
 
@@ -1375,10 +1439,7 @@ footer {
 
 @media screen and (max-height:550px){
 
-   main .textSide{
-        padding: 0;
-    }
-
+   
     main .Headline{
         margin: 0;
     }

@@ -131,3 +131,19 @@ const hiddenElements2 = document.querySelectorAll('.hidden2')
 hiddenElements.forEach((el) => observer.observe(el));
 hiddenElements1.forEach((el) => observer.observe(el));
 hiddenElements2.forEach((el) => observer.observe(el));
+
+
+  // nav on scroll 
+  
+
+  var myNav = document.getElementById('nav');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200  ) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+    } 
+    else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+    }
+};
