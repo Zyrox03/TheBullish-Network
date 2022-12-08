@@ -1019,6 +1019,12 @@ footer {
     transition: all 1s;
 }
 
+.hidden3 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-40%);
+    transition: all 1s;
+}
 
 .show {
     opacity: 1;
