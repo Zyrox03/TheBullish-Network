@@ -149,3 +149,98 @@ window.onscroll = function () {
         myNav.classList.remove("nav-colored");
     }
 };
+
+
+// vision read more 
+
+
+let readBtn = document.querySelectorAll('.vision_mission .col-2 button');
+
+let count = 0
+
+
+readBtn.forEach((readMore)=>{
+let more_VM = readMore.previousElementSibling
+let vision_mission = document.querySelector('.vision_mission')
+
+let isRead = false;
+    readMore.addEventListener('click',function(){
+    
+       
+            if(isRead === false){
+                more_VM.style.display = 'flex';
+                readMore.innerText = 'Read Less'
+                isRead = true;
+    
+                count++
+            }else{
+                more_VM.style.display = 'none';
+                readMore.innerText = 'Read More'
+                isRead = false;
+                count--
+    
+    
+            }
+            if(count=== 0){
+                vision_mission.style.height = 'fit-content'
+
+        }else{
+                vision_mission.style.height = 'fit-content'
+
+        }
+
+
+    
+})
+})
+
+
+
+
+
+// caroussel comment
+
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+
+let onComment = document.querySelector('.onComment');
+
+function previousComment(onComment){
+
+    if(onComment.previousElementSibling){
+        
+    onComment.style.transform = 'translateX(100%)'
+    onComment.previousElementSibling.style.transform = 'translateX(0%)'
+    onComment.previousElementSibling.classList.add('onComment');
+    onComment.classList.remove('onComment');
+
+    }
+}
+
+function nextComment(onComment){
+    if(onComment.nextElementSibling){
+
+        onComment.style.transform = 'translateX(-100%)'
+        onComment.nextElementSibling.style.transform = 'translateX(0%)'
+        onComment.nextElementSibling.classList.add('onComment');
+        onComment.classList.remove('onComment');
+    }
+    
+}
+
+prev.addEventListener('click',function(){
+    let onComment = document.querySelector('.onComment');
+
+   previousComment(onComment)
+})
+
+
+next.addEventListener('click',function(){
+    let onComment = document.querySelector('.onComment');
+
+    nextComment(onComment)
+
+})
+
+
+
