@@ -484,8 +484,7 @@ main .LogoSide{
     text-align: center;
     flex-direction: row;
     height: 100%;
-    width: 40%;
-
+    width: 70%;
     margin-top: 3em;
 
 
@@ -583,11 +582,13 @@ main .LogoSide{
     flex-direction: row;
     color: black;
     transition: all 0.25s ease-in;
+    overflow: hidden;
+    flex-wrap: wrap;
 
 }
 
 .vision_mission .col-2{
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -596,6 +597,8 @@ main .LogoSide{
     padding: 3em;
 
 }
+
+
 
 .vision_mission .col-2 h2{
     font-size: 3em;
@@ -877,15 +880,23 @@ padding-bottom: 1em;
     width: 100%;
     height: 70vh;
     background-color: #2D2D2D;
-
+    flex-direction: column;
+    padding: 2em 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.testimonials .title{
+    display: none;
 }
 
 .prev,.next{
     font-size: 2em;
     cursor: pointer;
+   
+
 }
 
 .prev{
@@ -948,7 +959,8 @@ padding-bottom: 1em;
 .testimonials .comment .testi_profil .circle img{
     width: 100%;
     border-radius: 50%;
-
+    min-height: 10px;
+    min-width: 10px;
     height: 100%;
     object-fit: cover;
 }
@@ -1267,6 +1279,11 @@ footer {
     }
 
 
+    .testimonials{
+        width: 100%;
+        height: 100vh;
+    }
+
 }
 
 
@@ -1474,6 +1491,27 @@ footer {
 
 
 
+    .vision_mission{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        transition: all 0.25s ease-in;
+        overflow: hidden;
+    
+    }
+    
+    .vision_mission .col-2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 3em;
+    
+    }
 
 
     footer {
@@ -1481,18 +1519,160 @@ footer {
 
         font-size: 1em;
     }
+
+    .testimonials .title{
+        display: flex;
+    }
+
+
+/* testimonials */
+
+.testimonials{
+    width: 100%;
+    height: fit-content;
+    background-color: #2D2D2D;
+    min-height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.prev,.next{
+    display: none;
+}
+
+
+
+
+ .comment_area{
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.testimonials .comment{
+    width: 100%;
+    height: 33.33%;
+    min-height: fit-content;
+    padding: 2em;
+    position: relative;
+    padding: 3em 0;
+    transition: all 1s;
+    border: 1px solid #097cff;
+    font-size: 0.7em;
+    margin-bottom: 2em;
+}
+
+.comment1{
+    transform: translateX(0%);
+}
+.comment2{
+    transform: translateX(0%);
+
+}
+.comment3{
+    transform: translateX(0%);
+
+
+}
+
+.testimonials .comment .testi_profil{
+    width: 100%;
+    height: 5em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials .comment .testi_profil .circle{
+
+    width: 4.5em;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.testimonials .comment .testi_profil .circle img{
+    width: 100%;
+    border-radius: 50%;
+    max-width: 5em;
+    max-height: 5em;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.testimonials .comment .testi_comment{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1em;
+
+
+    font-size: 1.4em;
+}
+
+.testimonials .comment .testi_name{
+    width: 100%;
+    height: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1em;
+
+    font-size: 1.2em;
+
+}
+.testimonials .comment .testi_stars{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.testi_stars i{
+    color: #307DD7;
+}
 }
 
 
 
 @media screen and (max-width:650px) {
 
+    
+
     .about_us .textSide p {
         z-index: 3;
         position: relative;
         width: 80%;
-        text-align: center;
+        text-align: start;
         font-size: 1.2em;
+    }
+    .about_us .textSide{
+        width: 95%;
+    }
+    .about_us .textSide .LogoSide{
+        width: 80%;
+        justify-content: space-around;
     }
 
     .Vision_Mission .content{
@@ -1511,7 +1691,7 @@ footer {
 
     .about_us {
         flex-direction: column;
-        padding-top: 2em;
+        padding-top: 5em;
         height: 100vh;
     }
 
@@ -1658,12 +1838,18 @@ footer {
 
     }
 
+
+    .about_us .textSide .LogoSide{
+        width: 100%;
+    }
+
 }
 
 
 @media screen and (max-height:550px){
 
-   
+
+
     main .Headline{
         margin: 0;
     }
