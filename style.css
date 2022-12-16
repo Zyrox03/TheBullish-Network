@@ -47,7 +47,7 @@ nav {
     cursor: pointer;
 }
 
-.socialNav {
+nav .socialNav {
     width: 20%;
     height: 100%;
     display: flex;
@@ -55,13 +55,13 @@ nav {
     align-items: center;
 }
 
-.socialNav i {
+nav .socialNav i {
     font-size: 2em;
     cursor: pointer;
     transition: all 0.25s;
 }
 
-.socialNav i:hover {
+nav .socialNav i:hover {
     color: #307DD7;
 }
 
@@ -158,7 +158,7 @@ nav .btn {
 
 .SideNav{
     background-color: #2F2F2F;
-
+    overflow: scroll;
     height: 100vh;
     width: 25em;
     position: fixed;
@@ -191,18 +191,40 @@ nav .btn {
     padding: 0.75em;
     cursor: pointer;
     font-size: 18px;
-    border:1px solid #307DD7 ;
 }
 
 .back i:active{
     color: #2f89f0;
 }
 
+.SideNav .socialNav{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 
+    padding: 1em 0;
+}
+
+.SideNav .socialNav a{
+    color: white;
+}
+.SideNav .socialNav i{
+    font-size: 2em;
+    cursor: pointer;
+    
+
+}
+
+.SideNav .socialNav i:active{
+    color: #2f89f0;
+}
 
 .sideNavBar{
     width: 100%;
-    height: 50%;
+    height: fit-content;
     margin-top: 2em;
 }
 
@@ -215,8 +237,7 @@ nav .btn {
 }
 
 .sideNavBar ul a{
-    height: 19%;
-    min-height: 50px;
+    height: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -248,13 +269,19 @@ nav .btn {
 
 
 .side_CTA{
-    height: 30%;
-    margin-top: 2em;
+    height: fit-content;
+    margin: 2em 0;
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.side_CTA .btn{
+    width: 40%;
+    height: 3em;
+    margin: 0.5em;
 }
 
 .side_CTA .btn:nth-of-type(2){
@@ -1996,6 +2023,11 @@ footer {
         font-size: 0.6em;
     }
 
+    .side_CTA{
+      
+        flex-direction: row;
+        
+    }
 
 
 }
@@ -2041,8 +2073,6 @@ footer {
         height: 60vh;
     }
 
-    .SideNav{
-        overflow: scroll;
-    }
+    
 
 }
