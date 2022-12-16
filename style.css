@@ -194,6 +194,10 @@ nav .btn {
     border:1px solid #307DD7 ;
 }
 
+.back i:active{
+    color: #2f89f0;
+}
+
 
 
 .sideNavBar{
@@ -220,7 +224,6 @@ nav .btn {
     align-items: center;
     text-decoration: none;
     color: white;
-    border-bottom: 1px solid #307DD7;
 
 
 }
@@ -237,11 +240,7 @@ nav .btn {
     padding: 0 2em;
 }
 
-.sideNavBar ul a:nth-of-type(1){
 
-    border-top: 1px solid #307DD7;
-
-}
 .sideNavBar ul li i{
     margin-right: 1em;
 }
@@ -433,6 +432,7 @@ main .LogoSide{
     padding: 5em 0em;
     width: 100%;
     background-color:#2D2D2D;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -588,6 +588,7 @@ main .LogoSide{
 }
 
 .vision_mission .col-2{
+
     width: 100%;
     height: 100%;
     display: flex;
@@ -609,7 +610,9 @@ main .LogoSide{
     font-size: 1.4em;
     margin-bottom: 1em;
 
+
 }
+
 
 .vision_mission .col-2 button{
 
@@ -622,6 +625,7 @@ main .LogoSide{
 
 .more_VM{
     display: none;
+
 }
 
 
@@ -734,6 +738,119 @@ main .LogoSide{
 
 /* pricing_pannel */
 
+.pricing{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+
+}
+
+.pricing .title{
+    color: black;
+}
+
+.pricing .card{
+
+    width: 30em;
+    height: 30em;
+    box-shadow: 0 0 10px 3px rgba(24, 23, 23,0.5);
+    background: linear-gradient(0deg,#3d3d3d 70%,#002652);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.5s;
+    padding: 0.5em 2em;
+
+    margin: 1em;
+}
+.pricing .card:hover{
+    transform: translateY(-0.5em);
+    cursor: pointer;
+
+
+}
+
+
+
+
+.pricing .card .plan_name{
+    font-size: 2em;
+    color: #2971c4;
+    text-align: center;
+    width: 100%;
+}
+
+.pricing .card p{
+    margin-bottom: 1em;
+}
+
+.pricing .card:nth-of-type(2) .plan_name{
+color: gold;
+margin-bottom: 1em;
+
+
+}
+
+.pricing .card:nth-of-type(2) .btn{
+    background-color: gold;
+}
+
+.pricing .card:nth-of-type(2) .btn:hover{
+    background-color: rgb(255, 222, 35);
+}
+
+.pricing .card:nth-of-type(2) ul i{
+    color: gold;
+}
+
+.pricing .card ul i{
+    color: #307DD7;
+}
+
+.pricing .card h3{
+    font-size: 1.5em;
+
+}
+
+.pricing .card ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+
+    font-size: 1.2em;
+}
+
+.pricing .card ul li{
+    margin-bottom: 1em;
+}
+
+
+
+.pricing .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    width: 100%;
+
+}
+
+
+
+/* 
 .pricing_pannel {
     height: fit-content;
     width: 100%;
@@ -746,15 +863,7 @@ main .LogoSide{
 
 }
 
-.pricing_pannel .row{
-    display: flex;
-    flex-direction: row;
-    padding: 2em 1em;
 
-    justify-content: center;
-    align-items: center;
-
-}
 
 .pricing_pannel .col-2 {
 
@@ -872,7 +981,7 @@ padding-bottom: 1em;
 
 .pricing_pannel .CTA .btn {
     border: 1px solid black;
-}
+} */
 
 /* testimonials */
 
@@ -880,6 +989,7 @@ padding-bottom: 1em;
     width: 100%;
     height: 70vh;
     background-color: #2D2D2D;
+
     flex-direction: column;
     padding: 2em 0;
     display: flex;
@@ -896,7 +1006,6 @@ padding-bottom: 1em;
     font-size: 2em;
     cursor: pointer;
    
-
 }
 
 .prev{
@@ -1010,7 +1119,7 @@ padding-bottom: 1em;
     color: black;
     height: fit-content;
     width: 100%;
-    padding-bottom: 5em;
+    padding-bottom: 10em;
     overflow: hidden;
     padding-top: 2em;
     z-index: 5;
@@ -1110,15 +1219,48 @@ padding-bottom: 1em;
     color: #131313;
 }
 
+/* footer_CTA */
+
+.faq_CTA{
+    width: 80%;
+    height: 7em;
+    position: absolute;
+    top: -3.5em;
+    background-color: #2971c4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2em;
+}
+
+.faq_CTA h1{
+    font-size: 1.5em;
+    color: black;
+}
+
+.faq_CTA .btn{
+    background-color: #2F2F2F;
+    color: white;
+}
+
+.faq_CTA .btn:hover{
+    background-color: #252525;
+}
+
+
 /* faq  */
 
 .faq {
     width: 100%;
     height: fit-content;
     background-color: #2D2D2D;
+    background: linear-gradient(0deg,#2F2F2F 70%,#002652);
+
     display: flex;
     flex-direction: column;
-
+    position: relative;
     justify-content: flex-start;
     align-items: center;
     padding: 3em 0 10em;
@@ -1424,7 +1566,7 @@ footer {
 
     /* pricing_pannel */
 
-   .pricing_pannel{
+   /* .pricing_pannel{
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -1448,7 +1590,7 @@ footer {
         margin-bottom: 1em;
 
 
-    }
+    } */
 
 
 
@@ -1513,6 +1655,8 @@ footer {
     
     }
 
+   
+
 
     footer {
         text-align: center;
@@ -1531,11 +1675,9 @@ footer {
     width: 100%;
     height: fit-content;
     background-color: #2D2D2D;
-    min-height: 100vh;
-    height: 100vh;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -1549,7 +1691,7 @@ footer {
  .comment_area{
 
     width: 100%;
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -1560,14 +1702,12 @@ footer {
 }
 
 .testimonials .comment{
-    width: 100%;
+    width: 70%;
     height: 33.33%;
-    min-height: fit-content;
     padding: 2em;
     position: relative;
     padding: 3em 0;
     transition: all 1s;
-    border: 1px solid #097cff;
     font-size: 0.7em;
     margin-bottom: 2em;
 }
@@ -1775,6 +1915,10 @@ footer {
     }
 
 
+    .pricing .card{
+        height: fit-content
+    }
+
 
 }
 
@@ -1846,8 +1990,25 @@ footer {
 }
 
 
+@media screen and (max-height:650px){
+
+    .testimonials .comment{
+        font-size: 0.6em;
+    }
+
+
+
+}
+
+
+
+
 @media screen and (max-height:550px){
 
+
+    .testimonials .comment{
+        font-size: 0.5em;
+    }
 
 
     main .Headline{
