@@ -32,7 +32,7 @@ nav {
 }
 
 .nav-colored { background-color:#2F2F2F; }
-.nav-transparent { background-color:transparent;}
+.nav-transparent { display: flex;}
 
 .logo {
     width: 13%;
@@ -667,10 +667,10 @@ main .LogoSide{
     cursor: pointer;
 }
 
-.more_VM{
+/* .more_VM{
     display: none;
 
-}
+} */
 
 
 /* topics  */

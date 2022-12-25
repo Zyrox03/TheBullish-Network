@@ -154,45 +154,45 @@ window.onscroll = function () {
 // vision read more 
 
 
-let readBtn = document.querySelectorAll('.vision_mission .col-2 button');
+// let readBtn = document.querySelectorAll('.vision_mission .col-2 button');
 
-let count = 0
-
-
-readBtn.forEach((readMore) => {
-    let more_VM = readMore.previousElementSibling
-    let vision_mission = document.querySelector('.vision_mission')
-
-    let isRead = false;
-    readMore.addEventListener('click', function () {
+// let count = 0
 
 
-        if (isRead === false) {
-            more_VM.style.display = 'flex';
-            readMore.innerText = 'Read Less'
-            isRead = true;
+// readBtn.forEach((readMore) => {
+//     let more_VM = readMore.previousElementSibling
+//     let vision_mission = document.querySelector('.vision_mission')
 
-            count++
-        } else {
-            more_VM.style.display = 'none';
-            readMore.innerText = 'Read More'
-            isRead = false;
-            count--
+//     let isRead = false;
+//     readMore.addEventListener('click', function () {
 
 
-        }
-        if (count === 0) {
-            vision_mission.style.height = 'fit-content'
+//         if (isRead === false) {
+//             more_VM.style.display = 'flex';
+//             readMore.innerText = 'Read Less'
+//             isRead = true;
 
-        } else {
-            vision_mission.style.height = 'fit-content'
+//             count++
+//         } else {
+//             more_VM.style.display = 'none';
+//             readMore.innerText = 'Read More'
+//             isRead = false;
+//             count--
 
-        }
+
+//         }
+//         if (count === 0) {
+//             vision_mission.style.height = 'fit-content'
+
+//         } else {
+//             vision_mission.style.height = 'fit-content'
+
+//         }
 
 
 
-    })
-})
+//     })
+// })
 
 
 
