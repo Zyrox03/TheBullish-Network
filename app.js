@@ -140,7 +140,7 @@ hiddenElements3.forEach((el) => observer.observe(el));
 
 var myNav = document.getElementById('nav');
 window.onscroll = function () {
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
+    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
         myNav.classList.add("nav-colored");
         myNav.classList.remove("nav-transparent");
     }
