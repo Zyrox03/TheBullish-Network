@@ -7,6 +7,7 @@ let sideListe = document.querySelectorAll('.sideNavBar a');
 
 
 
+
 burgerMenu.addEventListener('click', function () {
 
 
@@ -38,6 +39,11 @@ sideListe.forEach((liste) => {
 
 
 })
+
+
+
+
+
 
 
 
@@ -151,50 +157,6 @@ window.onscroll = function () {
 };
 
 
-// vision read more 
-
-
-// let readBtn = document.querySelectorAll('.vision_mission .col-2 button');
-
-// let count = 0
-
-
-// readBtn.forEach((readMore) => {
-//     let more_VM = readMore.previousElementSibling
-//     let vision_mission = document.querySelector('.vision_mission')
-
-//     let isRead = false;
-//     readMore.addEventListener('click', function () {
-
-
-//         if (isRead === false) {
-//             more_VM.style.display = 'flex';
-//             readMore.innerText = 'Read Less'
-//             isRead = true;
-
-//             count++
-//         } else {
-//             more_VM.style.display = 'none';
-//             readMore.innerText = 'Read More'
-//             isRead = false;
-//             count--
-
-
-//         }
-//         if (count === 0) {
-//             vision_mission.style.height = 'fit-content'
-
-//         } else {
-//             vision_mission.style.height = 'fit-content'
-
-//         }
-
-
-
-//     })
-// })
-
-
 
 
 
@@ -228,19 +190,19 @@ function nextComment(onComment) {
 
 }
 
-prev.addEventListener('click', function () {
-    let onComment = document.querySelector('.onComment');
+// prev.addEventListener('click', function () {
+//     let onComment = document.querySelector('.onComment');
 
-    previousComment(onComment)
-})
+//     previousComment(onComment)
+// })
 
 
-next.addEventListener('click', function () {
-    let onComment = document.querySelector('.onComment');
+// next.addEventListener('click', function () {
+//     let onComment = document.querySelector('.onComment');
 
-    nextComment(onComment)
+//     nextComment(onComment)
 
-})
+// })
 
 
 
@@ -274,11 +236,11 @@ let getCountMembers = async () => {
 
 
 }
-getCountMembers()
+// getCountMembers()
 
 
 
-
+// swiper.js
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters

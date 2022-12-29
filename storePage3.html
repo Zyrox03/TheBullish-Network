@@ -38,10 +38,12 @@
         <div class="logo">
             <a href="index.html">
                 <img src="images/Bullish logo.png" alt="Logo">
-               </a>
+            </a>
         </div>
 
-
+        <div class="cartMenu">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
 
         <div class="humMenu">
             <i class="fa-solid fa-bars"></i>
@@ -49,7 +51,24 @@
 
     </nav>
 
+    <div class="sideCart">
 
+        <div class="back">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="addedProducts">
+           
+
+
+        </div>
+
+        <div class="buy_Items_In_Cart">
+            <h4>Total : <span class="TOTAL">0</span> $</h4>
+            <button>Buy</button>
+        </div>
+
+    </div>
 
     <div class="SideNav">
 
@@ -93,6 +112,10 @@
 
     <section class="Product_info">
 
+        <div class="alertMessage">
+            <h2></h2>
+        </div>
+
 
         <div class="col-img">
             <img src="/images/TBN Merch3.jpg" alt="">
@@ -103,34 +126,34 @@
                 deserunt ex hic modi doloribus culpa itaque, delectus, quis ullam optio tempore ipsum, neque molestias
                 veritatis?</p>
 
-                <h3>Price : 34 $</h3>
+                <h3>Price : <span class="priceSpan">34</span>$  </h3>
 
             <form>
 
-                    <div class="rowInput">
-                        <label for="qty">Quantity : </label>
-                        <input type="number" name="qty" id="qty" placeholder="Quantity" min="1" max="15">
-                    </div>
+                <div class="rowInput">
+                    <label for="qty">Quantity : </label>
+                    <input type="number" name="qty" id="qty" placeholder="Quantity" min="1" max="15" value="1" onchange="changeQTY(3)">
+                </div>
 
-                    <div class="rowInput">
-                        <label for="Size">Size : </label>
-                        <select name="Size" id="Size">
-                            <option value="S">S</option>
-                            <option value="L">L</option>
-                            <option value="X">X</option>
-                            <option value="XL">XL</option>
-                        </select>
-                    </div>
+                <div class="rowInput">
+                    <label for="Size">Size : </label>
+                    <select name="Size" id="Size" onchange="changeSIZE(3)">
+                        <option value="S">S</option>
+                        <option value="L">L</option>
+                        <option value="X">X</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
 
-                    <div class="rowInput buyRow">
-                        <a class="AddCartBtn BuyBtn">
-                            <button>Add To Cart</button>
-                        </a>
-                        <a class="BuyNowBtn BuyBtn">
-                            <button>Buy Now</button>
-
-                        </a>
+                <div class="rowInput buyRow">
+                    <div class="AddCartBtn BuyBtn" >
+                        <button type="button" onclick="addItemToCart(3)">Add To Cart</button>
                     </div>
+                    <a class="BuyNowBtn BuyBtn">
+                        <button>Buy Now</button>
+
+                    </a>
+                </div>
 
             </form>
         </div>
@@ -142,7 +165,7 @@
 
 
     <!-- other products -->
-    
+
 
     <section class="OtherProducts">
 
@@ -158,20 +181,20 @@
                     <div class="img-prod">
                         <img src="/images/TBN Merch1.jpg" alt="">
                     </div>
-                <b>30$</b>
-                <h2>TBN Orange color</h2>
-    
+                    <b>30$</b>
+                    <h2>TBN Orange color</h2>
+
                 </div>
             </a>
-            
+
             <a href="storePage2.html">
                 <div class="Product_card">
                     <div class="img-prod">
                         <img src="/images/TBN Merch2.jpg" alt="">
                     </div>
-                <b>25$</b>
-                <h2>TBN green color</h2>
-    
+                    <b>25$</b>
+                    <h2>TBN green color</h2>
+
                 </div>
             </a>
         </div>
@@ -184,34 +207,56 @@
         <div class="links">
 
             <div class="FooterLogo">
-                    <img src="/images/Bullish logo.png" alt="">
+                <img src="/images/Bullish logo.png" alt="">
             </div>
 
             <div class="NavLinks">
                 <h4>Navigation Menu</h4>
                 <ul>
-                   <a href="/index.html"> <li>Home</li>  </a>
-                   <a href="/index.html#About"> <li>About</li>  </a>
-                   <a href="/index.html#team"> <li>Team</li>  </a>
-                   <a href="AllProductStore.html"> <li>Store</li>  </a>
-                   <a href="/index.html#FAQ"> <li>Faq</li>  </a>
+                    <a href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/index.html#About">
+                        <li>About</li>
+                    </a>
+                    <a href="/index.html#team">
+                        <li>Team</li>
+                    </a>
+                    <a href="AllProductStore.html">
+                        <li>Store</li>
+                    </a>
+                    <a href="/index.html#FAQ">
+                        <li>Faq</li>
+                    </a>
                 </ul>
             </div>
             <div class="socialFooterLink">
                 <h4>Social Media</h4>
                 <ul>
-                   <a href=""> <li>Discord</li>  </a>
-                   <a href=""> <li>Instagram</li>  </a>
-                   <a href=""> <li>Twitter</li>  </a>
+                    <a href="">
+                        <li>Discord</li>
+                    </a>
+                    <a href="">
+                        <li>Instagram</li>
+                    </a>
+                    <a href="">
+                        <li>Twitter</li>
+                    </a>
                 </ul>
             </div>
 
             <div class="policies">
                 <h4>Policies</h4>
                 <ul>
-                   <a href="Policies.html#terms"> <li>Terms and Conditions</li>  </a>
-                   <a href="Policies.html#return"> <li>Returns and exchanges</li>  </a>
-                   <a href="Policies.html#policies"> <li>Policies</li>  </a>
+                    <a href="Policies.html#terms">
+                        <li>Terms and Conditions</li>
+                    </a>
+                    <a href="Policies.html#return">
+                        <li>Returns and exchanges</li>
+                    </a>
+                    <a href="Policies.html#policies">
+                        <li>Policies</li>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -225,6 +270,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 
+    <script src="Cart.js"></script>
     <script src="app.js"></script>
 
 
