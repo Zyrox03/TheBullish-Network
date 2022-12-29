@@ -42,6 +42,9 @@
         </div>
 
 
+        <div class="cartMenu">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
 
         <div class="humMenu">
             <i class="fa-solid fa-bars"></i>
@@ -49,7 +52,22 @@
 
     </nav>
 
+    <div class="sideCart">
 
+        <div class="back">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <div class="addedProducts">
+           
+
+
+        </div>
+        <div class="buy_Items_In_Cart">
+            <h4>Total : <span class="TOTAL">0</span> $</h4>
+            <button>Buy</button>
+        </div>
+    </div>
 
     <div class="SideNav">
 
@@ -93,6 +111,9 @@
 
     <section class="Product_info">
 
+        <div class="alertMessage">
+            <h2></h2>
+        </div>
 
         <div class="col-img">
             <img src="/images/TBN Merch2.jpg" alt="">
@@ -103,18 +124,18 @@
                 deserunt ex hic modi doloribus culpa itaque, delectus, quis ullam optio tempore ipsum, neque molestias
                 veritatis?</p>
 
-                <h3>Price : 25 $</h3>
+                <h3>Price : <span class="priceSpan">25</span>$  </h3>
 
             <form>
 
                     <div class="rowInput">
                         <label for="qty">Quantity : </label>
-                        <input type="number" name="qty" id="qty" placeholder="Quantity" min="1" max="15">
+                        <input type="number" name="qty" id="qty" placeholder="Quantity" min="1" max="15" value="1" onchange="changeQTY(2)">
                     </div>
 
                     <div class="rowInput">
                         <label for="Size">Size : </label>
-                        <select name="Size" id="Size">
+                        <select name="Size" id="Size"  onchange="changeSIZE(2)">
                             <option value="S">S</option>
                             <option value="L">L</option>
                             <option value="X">X</option>
@@ -123,13 +144,13 @@
                     </div>
 
                     <div class="rowInput buyRow">
-                        <a class="AddCartBtn BuyBtn">
-                            <button>Add To Cart</button>
-                        </a>
-                        <a class="BuyNowBtn BuyBtn">
+                        <div class="AddCartBtn BuyBtn">
+                            <button type="button" onclick="addItemToCart(2)" >Add To Cart</button>
+                        </div>
+                        <div class="BuyNowBtn BuyBtn">
                             <button>Buy Now</button>
 
-                        </a>
+                        </div>
                     </div>
 
             </form>
@@ -225,6 +246,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 
+    <script src="Cart.js"></script>
     <script src="app.js"></script>
 
 

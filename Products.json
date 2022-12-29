@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "image" : "images/TBN Merch1.jpg",
+        "name": "orange",
+        "price": 30,
+        "qty" : 1,
+        "size" : "S"
+    },
+
+    {
+        "id": 2,
+        "image" : "images/TBN Merch2.jpg",
+        "name": "green",
+        "price": 25,
+        "qty" : 1,
+        "size" : "S"
+    },
+
+    {
+        "id": 3,
+        "image" : "images/TBN Merch3.jpg",
+        "name": "blue",
+        "price": 34,
+        "qty" : 1,
+        "size" : "S"
+    }
+
+
+]
