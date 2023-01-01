@@ -236,7 +236,7 @@ let getCountMembers = async () => {
 
 
 }
-// getCountMembers()
+getCountMembers()
 
 
 
