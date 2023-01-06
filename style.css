@@ -280,6 +280,11 @@ nav .btn {
 
 }
 
+.sideNavBar ul a :active{
+    color: #2f89f0;
+
+}
+
 .sideNavBar ul li {
     list-style: none;
     height: 19%;
@@ -1665,9 +1670,9 @@ padding-bottom: 1em;
 
 footer {
     background-color: #307DD7;
-    font-size: 0.6em;
+    font-size: 0.5em;
     width: 100%;
-    height: 2.5em;
+    height: 4em;
     color: black;
     display: flex;
     flex-direction: row;
