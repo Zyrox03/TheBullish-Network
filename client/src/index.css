@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  line-height: 1.5em;
+}
 
 nav{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -44,3 +47,63 @@ nav{
   color: #000;
 }
 
+
+
+/* Swiper */
+.swiper {
+  width: 80%;
+  height: 90vh;
+  user-select: none;
+}
+
+.swiper-button-next {
+  /* background-image: url(./next.svg); 
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+ background-position: center; */
+  right : -7%
+}
+
+.swiper-button-prev {
+  /* background-image: url(./prev.svg); 
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+ background-position: center; */
+  left : -7%
+}
+
+.swiper-pagination{
+  position: absolute;
+  top: -7%;
+}
+
+
+/* Content container */
+
+.content_container{
+  box-shadow: rgba(200, 200, 200, 0.1) 0px 0px 20px;
+  color: white;
+  width: 90%;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  user-select: none;
+  gap: 2em;
+}
+
+.faq_container{
+  box-shadow: rgba(200, 200, 200, 0.1) 0px 0px 20px;
+  color: white;
+  background-color: #121212;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 2em;
+  gap: 2em;
+}
