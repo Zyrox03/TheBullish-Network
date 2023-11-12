@@ -17,7 +17,7 @@ export const Footer = () => {
       </ul>
     </div>
 
-    <p className='text-gray-500'>&copy; 2023 Your Company. All rights reserved.</p>
+    <p className='text-gray-500 text-center'>&copy; 2023 Your Company. All rights reserved.</p>
   </div>
 </footer>
   )

@@ -44,29 +44,29 @@ export const Faq = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center gap-12">
-      <div className="faq_container">
-        <h2 className="text-3xl font-bold uppercase">
+    <div className="w-full flex flex-col items-center  gap-12">
+      <div className="faq_container py-4 px-3 md:p-8 ">
+        <h2 className="text-2xl md:text-3xl font-bold uppercase text-center">
           Frequently Asked Questions
         </h2>
 
-        <div className="w-full">
+        <div className="w-full ">
           {faqData.map(({ question, answer }, index) => (
             <div
               key={index}
-              className={`bg-question_bg p-4 rounded-lg my-4 shadow-[0px_0px_3px_rgba(200,200,200,0.3)] cursor-pointer ${
+              className={`bg-question_bg p-4  rounded-lg my-4 shadow-[0px_0px_3px_rgba(200,200,200,0.3)] cursor-pointer ${
                 openQuestion === index ? "" : ""
               }`}
               onClick={() => toggleQuestion(index)}
             >
-              <div className="text-xl font-semibold flex justify-between">
+              <div className="md:text-xl font-semibold flex justify-between">
                 {question}
                 <div className={`${openQuestion === index && 'rotate-90'} transition`}>
                   <ChevronRight />
                 </div>
               </div>
               {openQuestion === index && (
-                <div className="mt-2 text-gray-200 p-4">{answer}</div>
+                <div className="mt-2 text-sm sm:text-md text-gray-200 md:p-4">{answer}</div>
               )}
             </div>
           ))}

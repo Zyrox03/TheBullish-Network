@@ -2,14 +2,14 @@ import testPicture from "../../assets/network.jpg";
 
 export const Network = () => {
   return (
-    <div className="w-full flex flex-col items-center gap-12">
-      <div className="content_container">
+    <div id="network" className="w-full flex flex-col items-center text-center gap-12">
+      <div className="content_container py-8 px-4 lg:p-12">
         <h2 className="text-3xl font-bold uppercase">The Bullish Network</h2>
 
         <div className="w-full">
           <div className="grid grid-cols-2 gap-4 ">
             <div className="col-span-2">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div className="col-span-1">
                   <img
                     src={testPicture}
@@ -39,9 +39,13 @@ export const Network = () => {
           </div>
         </div>
 
-        <button className="main_button" role="button">
+<a target="_blank" rel="noreferrer" href="https://bullishnetwork.gumroad.com/l/xbtcv">
+<button className="main_button" role="button">
           Join Now
         </button>
+
+</a>
+      
       </div>
 
       <p className="text-md text-white mx-auto text-center mt-3 w-[70%]">

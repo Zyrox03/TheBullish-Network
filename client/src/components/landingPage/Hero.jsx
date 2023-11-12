@@ -1,27 +1,25 @@
 import { SwiperWidget } from "../../Widgets/SwiperWidget";
+
 // import heroImage from "../../assets/blockchain.jpg";
 
 export const Hero = () => {
   return (
-    <div className="relative overflow-hidden">
-      {/* <img
-        className="absolute inset-0 w-full h-full object-cover"
-        src={heroImage}
-        alt=""
-      /> */}
+    <div className="relative overflow-hidden ">
+ 
 
-      <div className=" inset-0 bg-main_bg bg-opacity-50 flex flex-col justify-around p-6 gap-12">
+      <div className=" inset-0 bg-main_bg bg-opacity-50 flex flex-col justify-around gap-12 ">
         <div
-          className="container mx-auto text-center"
+          className="container mx-auto text-center p-4 typewriter "
           style={{
             zIndex: 1,
           }}
         >
-          <h1 className="text-5xl font-bold text-white uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-white uppercase matrix w-fit lg:whitespace-nowrap  ">
             Your Money Community
           </h1>
-          <p className="text-xl text-white mt-2">
-          Friendly Community Sharing Knowledge and Advice on Understanding Crypto and the World of Business
+          <p className="text-smsm:ext-lg md:text-xl text-white mt-2 ">
+            Friendly Community Sharing Knowledge and Advice on Understanding
+            Crypto and the World of Business
           </p>
         </div>
 
@@ -29,7 +27,7 @@ export const Hero = () => {
           style={{
             zIndex: 1,
           }}
-          className="container mx-auto text-center"
+          className="container mx-auto text-center h-[50vh] sm:h-full w-[80%] max-w-[90vw] "
         >
           <SwiperWidget />
         </div>
