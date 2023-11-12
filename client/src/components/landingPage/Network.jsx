@@ -3,7 +3,32 @@ import testPicture from "../../assets/network.jpg";
 export const Network = () => {
   return (
     <div id="network" className="w-full flex flex-col items-center text-center gap-12">
-      <div className="content_container py-8 px-4 lg:p-12">
+      <div className="content_container py-8 px-4 lg:p-12 relative overflow-hidden">
+
+      <video
+          style={{
+            zIndex: 0,
+          }}
+          className="absolute inset-0 w-full h-full object-cover rounded-lg opacity-10"
+          autoPlay
+          muted
+          loop
+          loading="lazy"
+ 
+        >
+          <source
+            className=""
+            src="https://res.cloudinary.com/duh30yscb/video/upload/q_10/v1699798131/bullish_network/chart_background_swox1l.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div
+          style={{
+            zIndex: 1,
+          }}
+          className="w-full flex flex-col items-center text-center gap-12 "
+        >
         <h2 className="text-3xl font-bold uppercase">The Bullish Network</h2>
 
         <div className="w-full">
@@ -45,7 +70,7 @@ export const Network = () => {
         </button>
 
 </a>
-      
+</div>
       </div>
 
       <p className="text-md text-white mx-auto text-center mt-3 w-[70%]">

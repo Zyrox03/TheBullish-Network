@@ -14,7 +14,7 @@ export const Community = () => {
           muted
           loop
           loading="lazy"
-
+ 
         >
           <source
             className=""
