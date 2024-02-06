@@ -7,8 +7,6 @@ import "swiper/css/bundle";
 
 import { useEffect } from "react";
 
-import community from "../assets/community.jpg";
-import network from "../assets/network.jpg";
 
 export const SwiperWidget = () => {
   useEffect(() => {
@@ -17,13 +15,10 @@ export const SwiperWidget = () => {
       direction: "horizontal",
 
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
 
-      effect: "cards",
-      perSlideOffset: "0",
-      perSlideRotate: "0",
-      slideShadows: false,
+      effect: "slide",
 
       navigation: {
         nextEl: ".swiper-button-next",
@@ -40,7 +35,7 @@ export const SwiperWidget = () => {
 
       keyboard: {
         enabled: true,
-        onlyInViewport: false,
+        onlyInViewport: true,
       },
 
 
@@ -55,20 +50,24 @@ export const SwiperWidget = () => {
 
   return (
     <>
-      <div className="swiper ">
-        <div className="swiper-wrapper  ">
-          <div className="swiper-slide rounded-3xl shadow-lg ">
+      <div className="swiper">
+        <div className="swiper-wrapper cursor-grabbing">
+          <div className="swiper-slide shadow-lg">
             <img
-              className="h-full object-cover sm:object-right"
-              src={community}
-              alt=""
+              className="h-full object-cover sm:object-right rounded-3xl"
+              loading="lazy"
+
+              src="https://res.cloudinary.com/duh30yscb/image/upload/v1702204791/bullish_network/1-min_v4ujuu_mqbpgt.webp"
+              alt="Blue background with futuristic tech elements and the text 'The Bullish Network, Where Crypto Wisdom Meets Artificial Intelligence'."
             />
           </div>
-          <div className="swiper-slide rounded-3xl shadow-lg ">
+          <div className="swiper-slide  shadow-lg ">
             <img
-              className="h-full object-cover sm:object-right  "
-              src={network}
-              alt=""
+              className="h-full object-cover sm:object-right rounded-3xl  "
+              loading="lazy"
+
+              src="https://res.cloudinary.com/duh30yscb/image/upload/v1702204795/bullish_network/2-min_yec5b6_bsql8k.webp"
+              alt="Blue background with futuristic tech elements and the text 'Crypto Gains & Power of AI'."
             />
           </div>
         </div>

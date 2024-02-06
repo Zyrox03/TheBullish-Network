@@ -4,30 +4,32 @@ import { SwiperWidget } from "../../Widgets/SwiperWidget";
 
 export const Hero = () => {
   return (
-    <div className="relative overflow-hidden ">
- 
-
-      <div className=" inset-0 bg-main_bg bg-opacity-50 flex flex-col justify-around gap-12 ">
+    <div className="relative   ">
+      <div
+        className=" inset-0 bg-main_bg bg-opacity-50 flex flex-col justify-around gap-12 relative "
+        style={{ zIndex: 100 }}
+      >
+        <div className="blur blur-effect"></div>
+        <div className="blur blur-effect-1"></div>
         <div
-          className="container mx-auto text-center p-4 typewriter "
+          className="container mx-auto text-center p-4 typewriter  "
           style={{
             zIndex: 1,
           }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl text-white uppercase matrix w-fit lg:whitespace-nowrap  ">
-            Your Money Community
+          <h1 className="text-sm  sm:text-2xl md:text-4xl text-white uppercase matrix w-fit lg:whitespace-nowrap  ">
+            CRYPTO ENTREPRENEURIAL NETWORK
           </h1>
-          <p className="text-smsm:ext-lg md:text-xl text-white mt-2 ">
-            Friendly Community Sharing Knowledge and Advice on Understanding
-            Crypto and the World of Business
-          </p>
+          <h2 className="text-xs sm:text-sm md:text-xl text-white mt-6">
+            Where the future of the internet and exponential growth collide
+          </h2>
         </div>
 
         <div
           style={{
             zIndex: 1,
           }}
-          className="container mx-auto text-center h-[50vh] sm:h-full w-[80%] max-w-[90vw] "
+          className="container mx-auto text-center sm:h-full w-[100%] sm:w-[80%] max-w-[90vw] "
         >
           <SwiperWidget />
         </div>
@@ -38,13 +40,11 @@ export const Hero = () => {
           }}
           className="container mx-auto text-center "
         >
-          <p className="text-md text-white mx-auto mt-3 w-[70%]">
-            At The Bullish Network, we believe in the power of community,
-            inspiration, and education. No matter where you are on your
-            financial journey, our network provides a launching pad to new
-            heights. Connect with fellow investors, learn about the latest
-            trends, and get ready to achieve your goals. Join us now and set
-            your course for a prosperous future.{" "}
+          <p className="text-xs sm:text-sm md:text-xl  text-white mx-auto mt-3 w-[70%]">
+            Here at the Bullish Network, a significant amount of vital business
+            information is being stored within our walls. This community serves
+            as the master key to financial and digital enlightenment, providing
+            our members with <span className="shining_text">insights</span>  into crypto, AI, and more.{" "}
           </p>
         </div>
       </div>

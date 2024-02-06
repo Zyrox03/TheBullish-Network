@@ -12,7 +12,7 @@ export default {
         'main_bg': '#0D0D0D', 
         'secondary_bg': '#121212', 
         'question_bg': '#1a1a1a', 
-        'matrix': '#37ff00', 
+        'matrix': '#0283C6', 
       },
     },
   },

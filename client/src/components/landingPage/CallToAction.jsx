@@ -1,19 +1,24 @@
-import { Link } from "react-router-dom";
-
 export const CallToAction = () => {
   return (
-    <div className="text-center p-6 select-none text-white">
-      <h2 className="invite-only text-3xl md:text-5xl mb-4 uppercase matrix">
+    <div className="CTA text-center p-6 select-none w-full text-white flex flex-col items-center gap-8 relative"  style={{ zIndex: 100 }}>
+                  <div className="blur blur-effect"  ></div>
+                  <div className="blur blur-effect-1"  ></div>
+
+      <h2 className="invite-only text-sm  sm:text-2xl md:text-4xl mb-4 uppercase matrix">
         Join The Bullish Network{" "}
       </h2>
-      <h6 className="mb-6 text-lg shining_text">
-        Join our waitlist to secure your spot in line.
-      </h6>
-      <Link to="login">
+      
+    <img src="https://public-files.gumroad.com/d180obts8sf7gbahg9ymar9nlwfx" alt="hologram futuristic city with hologram text 'Bullish Network Own A Piece Of The Future'" className="w-full max-w-5xl mb-8 rounded-md shadow-lg"/>
+
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={import.meta.env.VITE_CASHOUT_LINK}
+      >
         <button className="main_button" role="button">
-          Join Now
+          <span className="text">Join Now</span>
         </button>
-      </Link>
+      </a>
     </div>
   );
 };

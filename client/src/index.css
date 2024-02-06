@@ -10,6 +10,46 @@ body {
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
+
+  margin: 0;
+}
+
+.blur {
+  background-color: #af40ff;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(160px);
+  z-index: -1;
+}
+
+.blur-effect {
+  left: 15%;
+  top: 25%;
+  width: 15rem;
+  height: 10rem;
+}
+.blur-effect-1 {
+  background-color: #00ddeb;
+  width: 20rem;
+  height: 7rem;
+  right: 15%;
+  top: 25%;
+}
+
+@media (max-width: 768px) {
+  .blur-effect {
+    left: 15%;
+    top: 25%;
+    width: 10rem;
+    height: 10rem;
+  }
+  .blur-effect-1 {
+    background-color: #00ddeb;
+    width: 10rem;
+    height: 7rem;
+    right: 15%;
+    top: 25%;
+  }
 }
 
 nav {
@@ -17,91 +57,175 @@ nav {
 }
 
 .nav-link {
-  @apply select-none text-white px-8 py-1 items-center flex bg-secondary_bg border rounded-full transition duration-300 ease-in-out transform hidden lg:flex;
+  @apply select-none text-white px-8 py-1 items-center flex bg-secondary_bg border rounded-full transition duration-300 ease-in-out transform  flex;
 }
 
 .nav-link:hover {
-  @apply hover:bg-main_bg hover:text-matrix;
+  @apply hover:bg-main_bg hover:text-blue-500;
 }
 
 .nav-link:active {
   @apply active:bg-white active:text-black;
 }
 
-
 /* Main button */
 
 .main_button {
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
-  --color: #fff;
-  --matrix_color: #37ff00;
-
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
-  background: conic-gradient(
-      from 90deg at var(--b) var(--b),
-      #0000 90deg,
-      var(--color) 0
-    )
-    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-    calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
-  font-size: 16px;
-
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
-
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 9px;
+  justify-content: center;
+  line-height: 0.5em;
+  max-width: 100%;
+  padding: 2px;
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-.main_button:hover,
-.main_button:focus-visible {
-  --_p: 0px;
-
-  outline-color: var(--color);
-  outline-offset: 0.05em;
+.CTA .main_button,
+.community .main_button {
+  font-size: 18px;
+  line-height: 1.25em;
+  padding: 3px;
 }
 
-.main_button:active {
-  background: var(--color);
-  color: #000;
+.main_button:active,
+.main_button:hover {
+  outline: 0;
+}
+
+.main_button span {
+  background-color: #0a122e;
+  padding: 12px 12px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.main_button:hover span {
+  background: none;
+}
+
+@media (min-width: 500px) {
+  .main_button span {
+    padding: 16px 16px;
+    font-size: 12px;
+  }
+  .CTA .main_button,
+  .community .main_button {
+    font-size: 18px;
+    line-height: 1.25em;
+    padding: 3px;
+  }
+
+  .CTA .main_button span,
+  .community .main_button span {
+    font-size: 18px;
+    line-height: 1.25em;
+    font-size: 20px;
+    line-height: 1.25em;
+    padding: 16px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main_button {
+    font-size: 18px;
+    min-width: 120px;
+  }
+
+  .main_button span {
+    font-size: 15px;
+    line-height: 1.25em;
+    padding: 16px 16px;
+  }
+}
+
+/* Secondary button */
+.secondary_button {
+  align-items: center;
+  border: 2px solid #0283c6;
+  border-radius: 8px;
+  color: #bcbcbc;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 100px;
+  padding: 3px 10px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.secondary_button:active,
+.secondary_button:hover {
+  background-color: #0283c6;
+  color: #ffffff;
+  transition: 500ms;
+  outline: 0;
+}
+
+.secondary_button span {
+  padding: 16px 16px;
+  border-radius: 6px;
+}
+
+.secondary_button:hover span {
+  background: none;
 }
 
 /* ORBITRON MATRIX FONT FAMILY  */
 
 .matrix {
-  text-shadow: -1px 5px #37ff00;
+  text-shadow: -0px 3px #0283c6;
   font-weight: 400;
   text-align: center;
 }
 
-
 /* Typing animation */
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid #37ff00; /* The typwriter cursor */
+  border-right: 0.15em solid #0283c6; /* The typwriter cursor */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 4s steps(40, end) ,
-    blink-caret 1s infinite;
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 4s steps(40, end), blink-caret 1s infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #37ff00; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #0283c6;
+  }
 }
 
 /* Swiper */
@@ -159,7 +283,7 @@ nav {
   color: transparent;
   background-position: right;
   background-size: 100% 100%;
-  background-image: linear-gradient(#37ff00, rgb(85, 255, 39));
+  background-image: linear-gradient(#0283c6, #2cb3fc);
   display: inline;
   background-repeat: no-repeat;
   transition: all 500ms ease-in-out;
@@ -175,7 +299,7 @@ nav {
   background: linear-gradient(
     to bottom right,
     white 30%,
-    #37ff00 100%,
+    #0283c6 100%,
     white 30%
   );
   -webkit-background-clip: text;
@@ -193,4 +317,20 @@ nav {
   100% {
     background-position: 70vw;
   }
+}
+
+/* LAZY LOADING STYLES */
+/* Define styles for lazy-loaded images */
+img[loading="lazy"] {
+  /* Add a transition for a smooth effect when the image loads */
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Set initial opacity to 0, so the image fades in when loaded */
+
+  /* Optional: You can add a placeholder background color or image */
+  background-color: #09122c;
+}
+
+/* Styles for lazy-loaded images when they are in the viewport (loaded) */
+img[loading="lazy"]:not([loading=""]) {
+  opacity: 1; /* Make the image fully visible when loaded */
 }

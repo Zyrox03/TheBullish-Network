@@ -4,6 +4,8 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SocialMedia } from "../../Widgets/SocialMedia";
 
+import { Helmet } from 'react-helmet';
+
 export const Contact = () => {
   const form = useRef();
 
@@ -67,9 +69,31 @@ export const Contact = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center py-6 justify-center text-start gap-6 ">
+    <>
+    <Helmet>
+        <title>Contact Us | Bullish Network</title>
+        <meta name="description" content="Get in touch with the Bullish Network for inquiries, support, and collaboration. Join our community for financial empowerment and insights." />
+        <meta name="keywords" content="contact, support, Bullish Network, community, financial empowerment" />
+        <meta name="author" content="Bullish Network" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contact Us | Bullish Network" />
+        <meta property="og:description" content="Get in touch with the Bullish Network for inquiries, support, and collaboration. Join our community for financial empowerment and insights." />
+        <meta property="og:image" content="https://res.cloudinary.com/duh30yscb/image/upload/v1702204791/bullish_network/1-min_v4ujuu_mqbpgt.webp" />
+        <meta property="og:url" content="https://bullishnetwork.xyz/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | Bullish Network" />
+        <meta name="twitter:description" content="Get in touch with the Bullish Network for inquiries, support, and collaboration. Join our community for financial empowerment and insights." />
+        <meta name="twitter:image" content="https://res.cloudinary.com/duh30yscb/image/upload/v1702204791/bullish_network/1-min_v4ujuu_mqbpgt.webp" />
+      </Helmet>
+    <div className="w-full min-h-screen flex flex-col items-center py-6 justify-center text-start gap-6 relative "
+      style={{ zIndex: 100 }}
+    >
+      <div className="blur blur-effect"></div>
+      <div className="blur blur-effect-1"></div>
+      
       <div className="content_container py-8 px-4 lg:p-12">
-        <h2 className="text-3xl font-bold uppercase">Contact</h2>
+        <h1 className="text-3xl font-bold uppercase">Contact</h1>
         <p className="text-sm text-center ">
           Have questions, suggestions, or just want to say hello? We&apos;d love
           to hear from you! Fill out the form below, and we&apos;ll get back to
@@ -141,12 +165,18 @@ export const Contact = () => {
                 Sending ...
               </button>
             ) : (
+
               <button
-                type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-700"
-              >
-                Submit
-              </button>
+              type="submit"
+              className="main_button my-6" role="button">
+  
+  <span className="text">
+  Submit
+
+  </span>
+</button>
+
+             
             )}
           </Form>
         </Formik>
@@ -158,9 +188,15 @@ export const Contact = () => {
 
       <Link to="/">
         <button className="main_button my-6" role="button">
+          <span className="text">
           Back
+
+            </span>
+
         </button>
       </Link>
     </div>
+    </>
+
   );
 };

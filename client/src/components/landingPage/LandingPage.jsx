@@ -1,42 +1,74 @@
 import { SocialMedia } from "../../Widgets/SocialMedia";
 import { CallToAction } from "./CallToAction";
 import { Community } from "./Community";
-import { Course } from "./Course";
-import { Events } from "./Events";
 import { Faq } from "./Faq";
 import { Footer } from "./Footer";
 import { Hero } from "./Hero";
 import { NavBar } from "./NavBar";
-import { Network } from "./Network";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
 
-export const LandingPage = ({user}) => {
+export const LandingPage = ({ user }) => {
   return (
     <>
+      <Helmet>
+        <title>The Bullish Network</title>
+
+        <meta
+          name="description"
+          content="Empowering our community through crypto strategies, financial sovereignty, and understanding the future of the internet. Join the Bullish Network for financial enlightenment and insights."
+        />
+        <meta
+          name="keywords"
+          content="crypto, entrepreneurship, financial sovereignty, future of the internet, Bullish Network, AI, Artificial Intelligence"
+        />
+        <meta name="author" content="Bullish Network" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Crypto Entrepreneurial Network | Bullish Network"
+        />
+        <meta
+          property="og:description"
+          content="Empowering our community through crypto strategies, financial sovereignty, and understanding the future of the internet. Join the Bullish Network for financial enlightenment and insights."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/duh30yscb/image/upload/v1702204791/bullish_network/1-min_v4ujuu_mqbpgt.webp"
+        />
+        <meta
+          property="og:image:alt"
+          content="The Bullish Network, Where Crypto Wisdom Meets Artificial Intelligence"
+        />
+        <meta property="og:url" content="https://bullishnetwork.xyz" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Crypto Entrepreneurial Network | Bullish Network"
+        />
+        <meta
+          name="twitter:description"
+          content="Empowering our community through crypto strategies, financial sovereignty, and understanding the future of the internet. Join the Bullish Network for financial enlightenment and insights."
+        />
+        <meta
+          name="twitter:image"
+          content="https://res.cloudinary.com/duh30yscb/image/upload/v1702204791/bullish_network/1-min_v4ujuu_mqbpgt.webp"
+        />
+        
+
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://bullishnetwork.xyz" />
+      </Helmet>
+
       <NavBar user={user} />
       <Hero />
-      <SocialMedia/>
-
       <Community />
-      <Network />
+      <SocialMedia />
       <CallToAction />
-      <Course />
-      <Events />
       <Faq />
-      <CallToAction />
-
-      <div className="spoiler_container text-center ">
-        <p className="text-md text-white mx-auto text-center mt-3 w-[70%] ">
-          Get Ready...{" "}
-          <span className="spoiler">
-            This season is gonna blow your mind ! Like this season is crazy
-            dawg! You know what happens on the first episode ? You are not gonna
-            believe me bro, like Its crazy dude !
-          </span>
-        </p>
-      </div>
-
       <Footer />
     </>
   );
@@ -44,7 +76,7 @@ export const LandingPage = ({user}) => {
 
 // Prop validation for the LandingPage component
 LandingPage.propTypes = {
-  user: PropTypes.object, // Assuming user is an object, adjust as needed
+  user: PropTypes.object,
 };
 
 // Default props (optional)

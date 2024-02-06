@@ -4,32 +4,32 @@ import { ChevronRight } from "react-feather";
 export const Faq = () => {
   const faqData = [
     {
-      question: "Is this server free to join?",
+      question: "What is the Bullish Network?",
       answer:
-        "Yes, The Bullish Network is 100% FREE but you can support our cause by purchasing merch or other offers. Click Now to join the community.",
+        "The Bullish Network is a community dedicated to empowering individuals through crypto strategies, financial sovereignty, and understanding the future of the internet.",
     },
     {
-      question: "What is the Elite Network?",
+      question: "What does the Bullish Network offer its community?",
       answer:
-        "Our Elite Network is a private network of Web 3 enthusiasts who have already maxed their Web 2 potential or strictly want our investments portfolio, advice, and inspiration.",
+        "We provide insights into crypto strategies, foster financial sovereignty, and unlock understanding of the future of the internet, serving as a key to financial enlightenment.",
     },
     {
-      question: "I want to join the Elite Network, what should I do?",
+      question: "Is membership required to access Bullish Network resources?",
       answer:
-        "Unlike the free server, to get access to our Private Network, a monthly subscription of $30 is needed. We made our pricing affordable to members who are ready for bigger things, members who are dedicated enough to change their financial perspective. You can find that via website or network.",
+        "Membership is not mandatory, but it offers additional benefits such as exclusive content, community forums, and networking opportunities.",
     },
     {
-      question: "I want to be an affiliate, how?",
+      question: "Interested in becoming an affiliate?",
       answer:
-        "To become an affiliate of our private network and start earning commissions for each sale you generate, Join us and message @bluebull to expedite the approval process. As an affiliate, you have the opportunity to earn 65% of the monthly sales as long as the member you referred remains actively subscribed. We appreciate your interest in partnering with us and look forward to working together!",
+        " Absolutely! Join our affiliate program to share the Bullish Network with others and earn rewards. Contact us for more information. Let's grow together!",
     },
     {
-      question: "What am I gaining when joining The Bullish Network?",
+      question:
+        "How can I contact Bullish Network for further assistance or inquiries?",
       answer:
-        "There is truly a lot to gain from this server! community, network, perspective, motivation, discipline, how the system operates, how to prepare for upcoming events, the list is infinite!",
+        " If you have additional questions or need further assistance, we're here to help! You can chat with us on social media, or you can use the client chat widget located at the bottom right of the page for real-time support",
     },
   ];
-  
 
   const [openQuestion, setOpenQuestion] = useState(null);
 
@@ -44,7 +44,13 @@ export const Faq = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center  gap-12">
+    <div
+      className="w-full flex flex-col items-center  gap-12 relative "
+      style={{ zIndex: 100 }}
+    >
+      <div className="blur blur-effect"></div>
+      <div className="blur blur-effect-1"></div>
+
       <div className="faq_container py-4 px-3 md:p-8 ">
         <h2 className="text-2xl md:text-3xl font-bold uppercase text-center">
           Frequently Asked Questions
@@ -59,14 +65,20 @@ export const Faq = () => {
               }`}
               onClick={() => toggleQuestion(index)}
             >
-              <div className="md:text-xl font-semibold flex justify-between">
+              <div className="text-xs md:text-xl font-semibold flex justify-between">
                 {question}
-                <div className={`${openQuestion === index && 'rotate-90'} transition`}>
+                <div
+                  className={`h-fit ${
+                    openQuestion === index && "rotate-90"
+                  } transition`}
+                >
                   <ChevronRight />
                 </div>
               </div>
               {openQuestion === index && (
-                <div className="mt-2 text-sm sm:text-md text-gray-200 md:p-4">{answer}</div>
+                <div className="mt-2 text-xs sm:text-sm md:text-xl text-gray-200 md:p-4">
+                  {answer}
+                </div>
               )}
             </div>
           ))}
